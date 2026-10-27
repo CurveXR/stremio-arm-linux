@@ -1,0 +1,90 @@
+.poster-card {
+  padding: 4px;
+  border-radius: 14px;
+}
+.poster-card:focus-visible .poster-frame,
+.poster-card:hover .poster-frame {
+  outline: 3px solid @accent_color;
+  outline-offset: 2px;
+}
+.poster-frame {
+  border-radius: 10px;
+  background: alpha(currentColor, 0.08);
+}
+.poster-frame progressbar trough,
+.poster-frame progressbar progress {
+  min-height: 5px;
+  border-radius: 0;
+}
+
+.detail-bg {
+  filter: brightness(0.55);
+}
+.detail-scrim {
+  background: linear-gradient(to right, alpha(black, 0.85) 0%, alpha(black, 0.55) 55%, alpha(black, 0.25) 100%);
+  color: white;
+}
+.detail-desc {
+  font-size: 1.05em;
+}
+.side-panel {
+  background: alpha(black, 0.55);
+}
+.side-panel list {
+  background: transparent;
+}
+.episode-thumb {
+  border-radius: 6px;
+  background: alpha(white, 0.08);
+}
+.stream-name {
+  font-weight: 700;
+}
+.stream-addon {
+  color: @accent_color;
+}
+
+.player-surface {
+  background: black;
+}
+.player-top {
+  padding: 8px 12px;
+  border-radius: 0;
+}
+.player-status {
+  color: white;
+  background: alpha(black, 0.92);
+  padding: 24px 32px;
+  border-radius: 18px;
+}
+label.subtitle {
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 0 3px black, 0 0 3px black, 1px 1px 2px black;
+  padding: 2px 8px;
+}
+
+.best-row {
+  background: alpha(@accent_bg_color, 0.35);
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+.chip {
+  padding: 2px 12px;
+  min-height: 26px;
+  border-radius: 999px;
+  font-size: 0.9em;
+}
+
+.skip-intro {
+  background: alpha(black, 0.75);
+  color: white;
+  padding: 10px 28px;
+  font-weight: bold;
+  border: 1px solid alpha(white, 0.4);
+}
+.skip-intro:hover {
+  background: alpha(white, 0.9);
+  color: black;
+}

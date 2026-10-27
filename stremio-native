@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+"""Launcher: run Stremio Native from a checkout."""
+import os
+import sys
+
+HERE = os.path.dirname(os.path.realpath(__file__))
+sys.path.insert(0, HERE)
+sys.path.append(os.path.join(HERE, "vendor"))  # bundled wheels (libtorrent); system packages win
+if sys.argv[1:2] == ["ctl"]:  # remote control for scripts and voice assistants
+    from stremio_native.core.ctl import main as ctl_main  # noqa: E402
+
+    sys.exit(ctl_main(sys.argv[2:], launcher=os.path.realpath(__file__)))
+
+from stremio_native.app import main  # noqa: E402
+
+sys.exit(main())
